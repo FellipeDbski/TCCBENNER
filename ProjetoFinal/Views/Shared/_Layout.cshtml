@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="shortcut icon" href="img/favicon.png"/>
+
+        <title>WebStore</title>
+
+    
+        <!-- Bootstrap CSS -->
+        <link href="~/Content/css/bootstrap.min.css" rel="stylesheet"/>
+        <!-- bootstrap theme -->
+        <link href="~/Content/css/bootstrap-theme.css" rel="stylesheet"/>
+        <!--external css-->
+        <!-- font icon -->
+        <link href="~/Content/css/elegant-icons-style.css" rel="stylesheet" />
+        <link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
+        <!-- full calendar css-->
+        <link href="~/Content/assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
+        <link href="~/Content/assets/fullcalendar/fullcalendar/fullcalendar.css" rel="stylesheet" />
+        <!-- easy pie chart-->
+        <link href="~/Content/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen" />
+        <!-- owl carousel -->
+        <link rel="~/Content/stylesheet" href="css/owl.carousel.css" type="text/css"/>
+        <link href="~/Content/css/jquery-jvectormap-1.2.2.css" rel="stylesheet"/>
+        <!-- Custom styles -->
+        <link rel="~/Content/stylesheet" href="css/fullcalendar.css" />
+        <link href="~/Content/css/widgets.css" rel="stylesheet"/>
+        <link href="~/Content/css/style.css" rel="stylesheet"/>
+        <link href="~/Content/css/style-responsive.css" rel="stylesheet" />
+        <link href="~/Content/css/xcharts.min.css" rel="stylesheet" />
+        <link href="~/Content/css/jquery-ui-1.10.4.min.css" rel="stylesheet" />
+
+    </head>
+
+    <body>
+        <!-- container section start -->
+        <section id="container" class="" />
+
+
+        <header class="header dark-bg">
+            <div class="toggle-nav">
+                <div class="icon-reorder tooltips" data-original-title="Clique para esconder a barra de navegação" data-placement="right"><i class="icon_menu"></i></div>
+            </div>
+
+            <!--logo start-->
+                <a href="~/Home/Index" class="logo">WEB <span class="lite">Store</span></a>
+            <!--logo end-->
+
+            <div class="top-nav notification-row">
+                <!-- notificatoin dropdown start-->
+                <ul class="nav pull-right top-menu">
+
+                    <!-- user login dropdown start-->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <i class="fa fa-sign-out" aria-hidden="true">Sair</i>
+                            <span class="profile-ava">
+
+                            </span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/Login/Sair"> <i class="icon_key_alt"></i>Sair</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- user login dropdown end -->
+                </ul>
+                <!-- notificatoin dropdown end-->
+            </div>
+        </header>
+        <!--sidebar start-->
+        <aside>
+            <div id="sidebar" class="nav-collapse ">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu">
+                    <li class="active">
+                        <a href="/Home/Index">
+                            <i class="icon_house_alt"></i>
+                            <span>Pagina Inicial</span>
+                        </a>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon_calculator_alt"></i>
+                            <span>Frente de Caixa</span>
+                            <span class="menu-arrow arrow_carrot-right"></span>
+                        </a>
+                        <ul class="sub" >
+                            <li><a href="~/Venda/form">Nova venda</a></li>
+                            <li><a href="#">Historico de Vendas</a></li>
+                            <li><a href="#">Fechamento</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="fa fa-cubes"></i>
+                            <span>Estoque</span>
+                            <span class="menu-arrow arrow_carrot-right"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="~/Produtos/Form">Cadastrar Produto</a></li>
+                            <li><a href="~/Produtos/Index">Pesquisar Produto</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon_profile"></i>
+                            <span>Clientes</span>
+                            <span class="menu-arrow arrow_carrot-right"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="~/Clientes/Form">Cadastrar Cliente</a></li>
+                            <li><a class="" href="~/Clientes/Index">Pesquisar Cliente</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon_piechart"></i>
+                            <span>Estatísticas</span>
+                            <span class="menu-arrow arrow_carrot-right"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="#">Estatiscas Gerais</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="fa fa-users" aria-hidden="true"></i>
+                            <span>Vendedores</span>
+                            <span class="menu-arrow arrow_carrot-right"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="/Vendedor/Index">Informações</a></li>
+                            <li><a class="" href="/Vendedor/Form">Cadastrar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <!-- sidebar menu end-->
+        <!--main content start-->
+        <section id="main-content">
+            <section class="wrapper">
+                <!--overview start-->
+                <div class="row">
+                    <div class="col-lg-12">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-9 col-md-12">
+                    </div>
+                </div>
+                <!-- Today status end -->
+                <!-- Footer goes here -->
+                <div class="widget-foot">
+                    <!-- Footer goes here -->
+                    </div>
+            </section>
+        </section>
+        @RenderBody()
+        <script src="~/Content/js/jquery.js"></script>
+        <script src="~/Content/js/jquery-ui-1.10.4.min.js"></script>
+        <script src="~/Content/js/jquery-1.8.3.min.js"></script>
+        <script type="~/Content/text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>
+        <!-- bootstrap -->
+        <script src="~/Content/js/bootstrap.min.js"></script>
+        <!-- nice scroll -->
+        <script src="~/Content/js/jquery.scrollTo.min.js"></script>
+        <script src="~/Content/js/jquery.nicescroll.js" type="text/javascript"></script>
+        <!-- charts scripts -->
+        <script src="~/Content/assets/jquery-knob/js/jquery.knob.js"></script>
+        <script src="~/Content/js/jquery.sparkline.js" type="text/javascript"></script>
+        <script src="~/Content/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script>
+        <script src="~/Content/js/owl.carousel.js"></script>
+        <!-- Full Google Calendar - Calendar -->
+        <script src="~/Content/assets/fullcalendar/fullcalendar/fullcalendar.js"></script>
+        <!--script for this page only-->
+        <script src="~/Content/js/calendar-custom.js"></script>
+        <script src="~/Content/js/jquery.rateit.min.js"></script>
+        <!-- custom select -->
+        <script src="~/Content/js/jquery.customSelect.min.js"></script>
+        <script src="~/Content/assets/chart-master/Chart.js"></script>
+
+        <!--custome script for all page-->
+        <script src="~/Content/js/scripts.js"></script>
+        <!-- custom script for this page-->
+        <script src="~/Content/js/sparkline-chart.js"></script>
+        <script src="~/Content/js/easy-pie-chart.js"></script>
+        <script src="~/Content/js/jquery-jvectormap-1.2.2.min.js"></script>
+        <script src="~/Content/js/jquery-jvectormap-world-mill-en.js"></script>
+        <script src="~/Content/js/xcharts.min.js"></script>
+        <script src="~/Content/js/jquery.autosize.min.js"></script>
+        <script src="~/Content/js/jquery.placeholder.min.js"></script>
+        <script src="~/Content/js/gdp-data.js"></script>
+        <script src="~/Content/js/morris.min.js"></script>
+        <script src="~/Content/js/sparklines.js"></script>
+        <script src="~/Content/js/charts.js"></script>
+        <script src="~/Content/js/jquery.slimscroll.min.js"></script>
+        <script type="text/javascript" src="~/Content/scriptsDeBusca.js"></script>
+        <script src="~/Content/js/scriptsProduto.js"></script>
+        <script src="~/Content/js/scriptsVendedores.js"></script>
+        <script src="~/Content/js/scriptsCliente.js"></script>
+        <script src="~/Content/js/scriptsVenda.js"></script>
+
+    </body>
+</html>

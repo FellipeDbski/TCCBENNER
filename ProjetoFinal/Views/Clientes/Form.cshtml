@@ -1,0 +1,81 @@
+﻿@model ProjetoFinal.Models.Cliente
+<section id="main-content">
+    <section class="wrapper">
+        <div class="row">
+            <div class="col-sm-12 col-md-10 col-md-offset-1">
+                <h3 class="page-header">Cadastrar Cliente</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-10 col-md-offset-1">
+                <section class="panel">
+                    <div class="panel-body">
+                        <form class="form-validate form-horizontal" id="feedback_form" method="post" action="/Clientes/Adiciona">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="name">Nome</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" id="nome" name="cliente.Nome" required />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="cpf">CPF</label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control" id="cpf" name="cliente.CPF" required/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="idade">Idade</label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control" id="idade" name="cliente.Idade" required/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="telefone">Telefone</label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control" id="telefone" name="cliente.Telefone" required/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="genero">Genêro</label>
+                                <div class="col-sm-3">
+                                    @Html.EnumDropDownListFor(c => c.Genero, "Selecione", new { @class = "form-control" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="cidade">Cidade</label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control" id="cidade" name="cliente.Cidade" required />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="bairro">Bairro</label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control" id="bairro" name="cliente.Bairro" required />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="rua">Rua</label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control" id="rua" name="cliente.Rua" required />
+                                </div>
+                            </div>
+
+                            <div>
+                                <button type="submit" class="btn btn-primary">Adicionar</button>
+                                <button class="btn btn-danger" href="#">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+</section>
+

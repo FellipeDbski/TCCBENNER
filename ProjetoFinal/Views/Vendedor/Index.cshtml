@@ -1,0 +1,45 @@
+﻿<section id="main-content">
+    <section class="wrapper">
+        <div class="row">
+            <div class="col-sm-12 col-md-10 col-md-offset-1">
+                <h3 class="page-header">Vendedores</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-10 col-md-offset-1">
+                <section class="panel">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-advance table-hover">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nome</th>
+                                    <th>Genero</th>
+                                    <th>Turno</th>
+                                    <th>Total Vendido</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var vendedor in ViewBag.Vendedores)
+                                {
+                                    <tr>
+                                        <td class="esseID">@vendedor.ID</td>
+                                        <td>@vendedor.Nome</td>
+                                        <td>@vendedor.Genero</td>
+                                        <td>@vendedor.Turno</td>
+                                        <td>@vendedor.TotalVendido</td>
+                                        <td>
+                                            <a class="btn btn-default alteraProduto" href="/Vendedor/Editar/@vendedor.ID"><i class="fa fa-pencil"></i></a>
+                                            <a class="btn btn-danger" href="#"><i class="fa fa-trash-o btnRemoveVendedor"></i></a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+</section>

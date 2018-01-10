@@ -1,0 +1,75 @@
+﻿@model ProjetoFinal.Models.Venda
+<section id="main-content">
+    <section class="wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header">Histórico do dia</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <section class="panel">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Cliente</th>
+                                    <th>Vendedor</th>
+                                    <th>Horario</th>
+                                    <th>Quantidade</th>
+                                    <th>Pagamento</th>
+                                    <th>Total</th>
+                                    <th>Produtos</th>
+                                    <th>Editar/Excluir</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var vendas in ViewBag.Vendas)
+                                {
+                                    <tr>
+                                        <td class="esseID">@vendas.ID</td>
+                                        <td>@vendas.Cliente.Nome</td>
+                                        <td>@vendas.Vendedor.Nome</td>
+                                        <td>@vendas.Data</td>
+                                        <td>@vendas.Quantidade</td>
+                                        <td>@vendas.FormaDePagamento.Nome</td>
+                                        <td>@vendas.Total</td>
+                                        <td>
+                                            <button class="btn btn-default modalVendaBusca" type="button" href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-search-plus"></i></button>
+                                        </td>
+                                        <td>                                           
+                                            <button class="btn btn-default" href="#"><i class="fa fa-pencil"></i></button>
+                                            <button class="btn btn-danger" href="#"><i class="fa fa-trash-o btnRemoveVenda"></i></button>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!--Modal-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Lista de Produtos Comprados</h5>
+            </div>
+            <div class="modal-body">
+               
+                <select multiple class="form-control" id="produtosVenda" name="venda.ListaDeProdutos">
+                                                                
+                </select>              
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btnFecha" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--FimModal-->

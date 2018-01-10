@@ -1,0 +1,48 @@
+﻿@model ProjetoFinal.Models.Vendedores
+<section id="main-content">
+    <section class="wrapper">
+        <div class="row">
+            <div class="col-sm-12 col-md-10 col-md-offset-1">
+                <h3 class="page-header">Editar Vendedor</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-10 col-md-offset-1">
+                <section class="panel">
+                    <div class="panel-body">
+                        <form class="form-validate form-horizontal" id="feedback_form" method="get" action="/Vendedor/Atualiza">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="name">Nome</label>
+                                <div class="col-sm-6">
+                                    <input type="text" value="@ViewBag.Vendedor.Nome" class="form-control" id="nome" name="vendedor.Nome"/>
+                                </div>
+                            </div>
+
+                            <input type="hidden" value="@ViewBag.Vendedor.ID" name="Vendedor.ID">
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="marca">Genêro</label>
+                                <div class="col-sm-3">
+                                    @Html.EnumDropDownListFor(v => v.Genero, "Selecione", new { @class = "form-control" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="tamanho">Turno</label>
+                                <div class="col-sm-2">
+                                    @Html.EnumDropDownListFor(v => v.Turno, "Selecione", new { @class = "form-control" })
+                                </div>
+                            </div>
+
+                            <div>
+                                <button type="submit" class="btn btn-primary">Alterar</button>
+                                <button class="btn btn-danger" href="#">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+</section>
+
